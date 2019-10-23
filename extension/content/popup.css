@@ -30,7 +30,6 @@ dir li:hover {
 dir li:hover span {
 }
 dir li span {
-    display: block;
     text-decoration: none;
 }
 js {
