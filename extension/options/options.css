@@ -1,0 +1,29 @@
+body {
+    font-size: 14px;
+}
+.app {
+    height: 30px;
+    background-color: #F1F1F1;
+    background-image: url('../img/app.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.app:hover {
+    background-color: #E4E4E4;
+}
+.row {
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding-left: 10px;
+}
+.row:hover {
+    background-color: #F1F1F1;
+}

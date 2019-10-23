@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link type="text/css" href="options.css" rel="stylesheet">
+    <link type="text/css" href="edit.css" rel="stylesheet">
+    <script src="edit.js"></script>
+    <script src="../tool/escape.js"></script>
+    <title>SBGCExt: edit tree of scripts</title>
+</head>
+<body>
+<a href="options.html" class="app">SBGCExt</a>
+
+<table style="width:100%">
+    <tr>
+        <td rowspan="5" style="width:420px">
+            <ol class="tree" id="treeContent"></ol>
+        </td>
+        <td style="height:20px">
+            <button id="moveUp" title="Move up" class="func"></button>
+            <button id="moveDown" title="Move down" class="func"></button>
+            <button id="addFolder" title="Add folder" class="func"></button>
+            <button id="addFile" title="Add file" class="func"></button>
+            <button id="save" title="Save" class="func"></button>
+            <button id="delete" title="Delete" class="func"></button>
+        </td>
+    </tr>
+    <tr>
+        <td style="height:40px">Name<input type="text" id="name" style="width:100%" disabled="disabled"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Script<textarea id="script" style="width:100%; height:290px" disabled="disabled"></textarea></td>
+    </tr>
+</table>
+
+</body>
+</html>

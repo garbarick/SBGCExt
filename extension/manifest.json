@@ -1,0 +1,51 @@
+{
+    "manifest_version": 2,
+    "name": "SBGCExt",
+    "version": "1.0.4",
+    "description": "Add into context menu submenu with java-scripts",
+
+    "browser_action":
+    {
+        "default_title": "SBGCExt",
+        "default_icon": "img/app.png",
+        "default_popup": "content/popup.html"
+    },
+
+    "permissions": ["contextMenus"],
+
+    "background":
+    {
+        "scripts":
+        [
+            "content/background.js",
+            "tool/escape.js"
+        ],
+        "persistent": false
+    },
+
+    "icons":
+    {
+        "16": "img/app.png",
+        "48": "img/app.png",
+        "128": "img/app.png"
+    },
+
+    "content_scripts":
+    [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content/content.js"]
+        }
+    ],
+
+    "options_page": "options/options.html",
+
+    "permissions":
+    [
+        "tabs",
+        "contextMenus",
+        "background",
+        "clipboardWrite",
+        "storage"
+    ]
+}

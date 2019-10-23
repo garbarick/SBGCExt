@@ -1,0 +1,101 @@
+ol.tree {
+	padding: 0 0 0 30px;
+    width: 400px;
+    height: 400px;
+    border-style: groove;
+    border-width: 2px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+li {
+	position: relative;
+	margin-left: -15px;
+	list-style: none;
+}
+li.file {
+	margin-left: -1px !important;
+}
+li.file file {
+	background-image: url('../img/file.png');
+	background-repeat: no-repeat;
+    background-position: 0 0;
+	padding-left: 21px;
+	display: block;
+	cursor: pointer;
+}
+li input {
+	position: absolute;
+	left: 0;
+	margin-left: 0;
+	opacity: 0;
+	z-index: 2;
+	cursor: pointer;
+	height: 1em;
+	width: 1em;
+	top: 0;
+}
+li input + ol {
+	background-image: url('../img/expand.png');
+	background-repeat: no-repeat;
+    background-position: 40px 0;
+	margin: -1em 0 0 -44px;
+	height: 1em;
+}
+li input + ol > li {
+	display: none;
+	margin-left: -14px !important;
+	padding-left: 1px;
+}
+li folder {
+	background-image: url('../img/folder.png');
+	background-repeat: no-repeat;
+    background-position: 15px 1px;
+	cursor: pointer;
+	display: block;
+	padding-left: 37px;
+}
+li input:checked + ol {
+	background-image: url('../img/toggle.png');
+	background-repeat: no-repeat;
+    background-position: 40px 5px;
+	margin: -1.3em 0 0 -44px;
+	padding: 1.6em 0 0 80px;
+	height: auto;
+}
+li input:checked + ol > li {
+	display: block;
+	margin: 0 0 0.125em;
+}
+li input:checked + ol > li:last-child {
+	margin: 0 0 0.063em;
+}
+js {
+    display: none;
+}
+.current {
+    background-color: #F1F1F1;
+}
+.func {
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#addFolder {
+	background-image: url('../img/folder.png');
+}
+#addFile {
+	background-image: url('../img/file.png');
+}
+#save {
+ 	background-image: url('../img/save.ico');
+ }
+#delete {
+	background-image: url('../img/delete.ico');
+}
+#moveUp {
+	background-image: url('../img/moveUp.ico');
+}
+#moveDown {
+	background-image: url('../img/moveDown.ico');
+}
