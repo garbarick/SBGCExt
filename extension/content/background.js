@@ -292,7 +292,7 @@ chrome.contextMenus.onClicked.addListener
     {
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
         {
-            chrome.tabs.sendMessage(tab.id, {setEvent: true, js: SBGCExt.getScript(info.menuItemId)}); 
+            chrome.tabs.sendMessage(tabs[0].id, {setEvent: true, js: SBGCExt.getScript(info.menuItemId)}); 
         });
     }
 );
