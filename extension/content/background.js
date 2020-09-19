@@ -53,6 +53,12 @@ if ("undefined" == typeof(SBGCExt))
 
         getScript : function(menuId)
         {
+            var result = this.scripts[menuId];
+            if (typeof result === 'undefined')
+            {
+                console.log("update context menu");
+                this.updateContextMenu();
+            }
             return this.scripts[menuId];
         },
 
@@ -290,10 +296,7 @@ chrome.contextMenus.onClicked.addListener
 (
     function(info, tab)
     {
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
-        {
-            chrome.tabs.sendMessage(tabs[0].id, {setEvent: true, js: SBGCExt.getScript(info.menuItemId)}); 
-        });
+        chrome.tabs.sendMessage(tab.id, {setEvent: true, js: SBGCExt.getScript(info.menuItemId)});
     }
 );
 //-----------------------------------------------------------
